@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Swirl - About Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #ffb3b3, #ffccff);
+            overflow-x: hidden;
+            animation: fadeIn 1.5s ease-out;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            top: 0;
+            opacity: 0;
+            animation: slideDown 1.5s ease-in-out forwards;
+        }
+        header nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        header nav a:hover {
+            color: #ff6347;
+            transform: translateY(-5px);
+            font-size: 1.4rem; /* Slightly increased font size */
+        }
+        header .register {
+            padding: 8px 18px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        header .register:hover {
+            background-color: #ff6347;
+            transform: translateY(-5px);
+        }
+        .container {
+            width: 90%;
+            margin: 120px auto 40px; /* Adjusted to avoid overlap with the header */
+        }
+        .section {
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 1s ease-out forwards;
+        }
+        .section h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-out;
+        }
+        .about-section img {
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .about-section img:hover {
+            transform: scale(1.05);
+        }
+        .about-section h3 {
+            font-size: 1.8rem;
+            margin: 15px 0;
+            color: #333;
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #fff;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 2s ease-out 1s forwards;
+        }
+        footer p {
+            margin: 8px 0;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Animation Definitions */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .login{
+            margin-right: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+      <h1>  <div class="logo">Soft Swirl</div></h1>
+        <nav>
+            <a href="Home.html" target="_blank">Home</a>
+            <a href="About us.html" target="_blank">About</a>
+            <a href="Menu.html" target="_blank">Menu</a>
+            <a href="Order.html" target="_blank">Order</a>
+            <a href="Contact us.html" target="_blank">Contact Us</a>
+        </nav>
+        <button class="Login">login</button>
+    </header>
+   
+    <div class="container">
+        <!-- About Section -->
+        <div class="section about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-section">
+                    <img src="istockphoto-1346574955-612x612.jpg" alt="About Image">
+                    <p>We are a cozy ice cream paradise offering happiness in every scoop. Welcome to Soft Swirl, where every scoop brings joy! From humble beginnings to a community favorite, we craft the finest ice cream using premium ingredients and creative recipes. Whether you’re enjoying a classic cone or a unique creation, we’re here to make every visit delightful. At Soft Swirl, happiness is always just a scoop away!</p>
+                </div>
+                <div class="about-section">
+                    <img src="download (9).jpeg" alt="Our Journey">
+                    <h3>Our Journey</h3>
+                    <p>Discover how Soft Swirl became a community favorite. What started as a small dream has grown into a beloved hub for ice cream enthusiasts. Our journey began with a passion for crafting unique, delicious flavors that bring people together. From humble beginnings in a cozy kitchen to becoming a cornerstone of the neighborhood, we've always focused on creating joy in every bite.</p>
+                </div>
+                <div class="about-section">
+                    <h3>Video Details</h3>
+                    <p>Watch our story unfold in this engaging video.</p>
+                    <video width="320" height="240" controls>
+                        <source src="https://www.youtube.com/c/thecookingfoodie?sub_confirmation=1" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="about-section">
+                    <h3>Our Committee</h3>
+                    <p>Meet the passionate team behind Soft Swirl. At Soft Swirl, our Ice Cream Committee is the heart and soul of everything we do. This dedicated team is behind every creamy swirl, bold flavor, and joyful scoop. Our committee brings together passionate individuals who are experts in crafting innovative recipes, selecting the finest ingredients, and ensuring every customer has an unforgettable experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Address: Soft Swirl HQ, Main Street, Colombo, Sri Lanka</p>
+        <p>Email: info@softswirl.com | Contact: +94 123 4567</p>
+        <p>&copy; 2025 Soft Swirl. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

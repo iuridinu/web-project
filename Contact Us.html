@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+            background-image: url("full-shot-man-posing-with-ice-cream_23-2150329924.jpeg");
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            animation: slideInFromTop 1s ease-in-out;
+        }
+        header .logo {
+            font-size: 32px;
+            font-weight: bold;
+            animation: bounceIn 1s ease-in-out;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons a {
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #4CAF50;
+        }
+        
+        .login-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            padding: 20px;
+            flex: 1;
+            gap: 20px;
+            animation: slideInFromBottom 1s ease-in-out;
+        }
+        .contact {
+            flex: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .contact h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            max-width: 400px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #4CAF50;
+        }
+        .contact-form button {
+            padding: 8px 16px;
+            font-size: 14px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+        .articles {
+            flex: 1;
+        }
+        .articles-section {
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .articles-section h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .article-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .article-item img {
+            width: 50px;
+            height: 50px;
+            background: #ddd;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+        footer p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        /* New Layout and Animation for Images */
+        .images {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        .images img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+            opacity: 0;
+            animation: moveInFromSides 1.5s ease-in-out forwards;
+        }
+        .images img:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+        .images img:nth-child(even) {
+            animation-delay: 1s;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+            }
+            60% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes moveInFromSides {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Soft Swirl</div>
+        <nav>
+            <a href="Home.html" target="_blank">Home</a>
+            <a href="About us.html" target="_blank">About</a>
+            <a href="Menu.html" target="_blank">Menu</a>
+            <a href="Order.html" target="_blank">Order</a>
+            <a href="Contact us.html" target="_blank">Contact Us</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook">&#x1F4F7;</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter">&#x1F426;</a>
+            <a href="https://instagram.com" target="_blank" title="Instagram">&#x1F33A;</a>
+        </div>
+
+
+        <button class="login-btn">Login</button>
+    </header>
+    <div class="container">
+        <div class="contact">
+            <h1>Contact Us</h1>
+            <div class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button>Send</button>
+            </div>
+        </div>
+        <div class="articles">
+            <div class="articles-section">
+               
+                <div class="images">    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map-container" style="text-align:center; margin:20px 0;">
+        <h2 class="from-heading">......OUR LOCATION......</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434508616!2d144.95565171531814!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce840!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1608004295649!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+    
+    <footer>
+        <p>Address: Soft Swirl HQ, Main Street, Colombo, Sri Lanka</p>
+        <p>Email: info@softswirl.com | Contact: +94 123 4567</p>
+        <p>&copy; 2025 Soft Swirl. All rights reserved.</p>
+    </footer>
+</body>
+</html>

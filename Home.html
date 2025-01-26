@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soft Swirl</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-brand {
+      font-size: 2.9rem; /* Increases the font size */
+      letter-spacing: 2px; /* Adds space between letters */
+      font-weight: bold; /* Makes the text bold */
+      animation: fadeIn 2s ease-in-out;
+    }
+    
+    .nav-link {
+      margin-right: 20px; /* Adds spacing between navigation links */
+      font-size: 1.2rem; /* Increases the font size */
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .nav-link:hover {
+      color: #007bff;
+    }
+
+    .login-btn {
+      background-color: #007bff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .login-btn a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Carousel styles */
+    .carousel-item img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: slideIn 1.5s ease-out;
+    }
+
+    .carousel-caption h1, .carousel-caption h4 {
+      animation: slideIn 2s ease-out;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      margin-top: auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translate(-50%, -50%) translateY(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translate(-50%, -50%) translateY(0);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Home.html">
+        Soft Swirl
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About us.html" target="_blank">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Menu.html" target="_blank">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Order.html" target="_blank">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact us.html" target="_blank">Contact Us</a>
+          </li>
+        </ul>
+        <button class="btn login-btn">
+          <a href="Login.html" target="_blank">Login</a>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel with 2 pictures and captions -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="M_Tt_N8wd_baf7f81c7f.jpg" class="d-block w-100" alt="Ice Cream Image 1">
+        <div class="carousel-caption">
+          <h1>Welcome to Soft Swirl</h1>
+          <p><h6>Whisk Me Away to Ice Cream Paradise</h6></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="st choc.jpeg" class="d-block w-100" alt="Ice Cream Image 2">
+        <div class="carousel-caption">
+          <p><h4>You can't Buy Happiness, but You Can Buy Ice Cream and That Is Pretty Much the Same Thing</h4></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <p>Address: Soft Swirl HQ, Main Street, Colombo, Sri Lanka</p>
+    <p>Email: info@softswirl.com | Contact: +94 123 4567</p>
+    <p>&copy; 2025 Soft Swirl. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
